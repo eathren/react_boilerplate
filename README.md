@@ -29,25 +29,25 @@ This boilerplate provides a streamlined setup for developing modern web applicat
 
 1. Clone the repository:
 
-    ```sh
-    git clone https://github.com/your-repo/react-vite-tailwind-boilerplate.git
-    cd react-vite-tailwind-boilerplate
-    ```
+   ```sh
+   git clone https://github.com/your-repo/react-vite-tailwind-boilerplate.git
+   cd react-vite-tailwind-boilerplate
+   ```
 
 2. Install the dependencies:
 
-    ```sh
-    npm install
-    # or
-    yarn install
-    ```
+   ```sh
+   pnpm install
+   # or
+   yarn install
+   ```
 
 ## Development
 
 To start the development server with Vite:
 
 ```sh
-npm run dev
+pnpm run dev
 # or
 yarn dev
 ```
@@ -59,7 +59,7 @@ This will launch the application at `http://localhost:3000` with hot module repl
 To build the project for production:
 
 ```sh
-npm run build
+pnpm run build
 # or
 yarn build
 ```
@@ -71,7 +71,7 @@ The output will be in the `dist` directory.
 To lint the project files:
 
 ```sh
-npm run lint
+pnpm run lint
 # or
 yarn lint
 ```
@@ -79,7 +79,7 @@ yarn lint
 To format the project files using Prettier:
 
 ```sh
-npm run prettier
+pnpm run prettier
 # or
 yarn prettier
 ```
@@ -89,7 +89,7 @@ yarn prettier
 To start Storybook for developing UI components:
 
 ```sh
-npm run storybook
+pnpm run storybook
 # or
 yarn storybook
 ```
@@ -97,7 +97,7 @@ yarn storybook
 To build the Storybook static site:
 
 ```sh
-npm run build-storybook
+pnpm run build-storybook
 # or
 yarn build-storybook
 ```
@@ -108,17 +108,17 @@ If you are developing a production application, it is recommended to enhance the
 
 1. Update the `parserOptions` in your ESLint configuration:
 
-    ```js
-    export default {
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        project: ['./tsconfig.json', './tsconfig.node.json'],
-        tsconfigRootDir: __dirname,
-      },
-      // other rules...
-    }
-    ```
+   ```js
+   export default {
+     parserOptions: {
+       ecmaVersion: 'latest',
+       sourceType: 'module',
+       project: ['./tsconfig.json', './tsconfig.node.json'],
+       tsconfigRootDir: __dirname,
+     },
+     // other rules...
+   }
+   ```
 
 2. Replace `plugin:@typescript-eslint/recommended` with `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`.
 
@@ -126,50 +126,50 @@ If you are developing a production application, it is recommended to enhance the
 
 4. Install `eslint-plugin-react` and add `plugin:react/recommended` and `plugin:react/jsx-runtime` to the `extends` list:
 
-    ```sh
-    npm install eslint-plugin-react --save-dev
-    # or
-    yarn add eslint-plugin-react --dev
-    ```
+   ```sh
+   pnpm install eslint-plugin-react --save-dev
+   # or
+   yarn add eslint-plugin-react --dev
+   ```
 
-    Update your ESLint configuration:
+   Update your ESLint configuration:
 
-    ```json
-    {
-      "extends": [
-        "plugin:react/recommended",
-        "plugin:react/jsx-runtime",
-        // other extends...
-      ]
-    }
-    ```
+   ```json
+   {
+     "extends": [
+       "plugin:react/recommended",
+       "plugin:react/jsx-runtime"
+       // other extends...
+     ]
+   }
+   ```
 
 ## Project Structure
 
 The project's structure is organized as follows:
 
 ```md
-├── public              # Static assets
+├── public # Static assets
 ├── src
-|   ├── app             # Routes, etc
-│   ├── assets          # Images, fonts, etc.
-│   ├── components      # React components, (e.g., ui, error handling)
-│   ├── hooks           # Custom hooks
-│   ├── features        # feature components, hooks, store...
-│   ├── store           # Shared zustand stores
-│   ├── styles          # Global styles (e.g., Tailwind CSS)
-│   ├── utils           # Utility functions
-│   ├── App.tsx         # Root component
-│   ├── index.tsx       # Entry point
-│   └── ...             # Other directories and files
-├── .eslintrc.cjs       # ESLint configuration
-├── .prettierrc         # Prettier configuration
-├── postcss.config.cjs  # PostCSS configuration
+| ├── app # Routes, etc
+│ ├── assets # Images, fonts, etc.
+│ ├── components # React components, (e.g., shared ui)
+│ ├── hooks # Custom hooks
+│ ├── features # feature components, hooks, store...
+│ ├── lib # Auth, utility files for tailwind...
+│ ├── store # Shared zustand stores
+│ ├── styles # Global styles (e.g., Tailwind CSS)
+│ ├── utils # Utility functions
+│ ├── index.tsx # Entry point
+│ └── ... # Other directories and files
+├── .eslintrc.cjs # ESLint configuration
+├── .prettierrc # Prettier configuration
+├── postcss.config.cjs # PostCSS configuration
 ├── tailwind.config.cjs # Tailwind CSS configuration
-├── tsconfig.json       # TypeScript configuration
-├── tsconfig.node.json  # TypeScript configuration for Node
-├── vite.config.ts      # Vite configuration
-└── package.json        # Project metadata and scripts
+├── tsconfig.json # TypeScript configuration
+├── tsconfig.node.json # TypeScript configuration for Node
+├── vite.config.ts # Vite configuration
+└── package.json # Project metadata and scripts
 ```
 
 ## License
