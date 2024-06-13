@@ -1,30 +1,26 @@
 import { Link } from 'react-router-dom'
+import { Button } from '../button'
 
 export const Header = () => {
   return (
-    <header className="bg-slate-100 pt-3 pb-3 mb-16 shadow-md">
+    <header className="bg-slate-100 py-3 mb-16 shadow-md">
       <nav className="flex items-center justify-between max-w-[1200px] m-auto px-4">
         <Link to="/" className="text-xl font-semibold">
-          <h3 className="text-xl font-semibold">Zenote</h3>
+          <h3 className="text-xl font-semibold">Logo</h3>
         </Link>
-        <div className="hidden md:flex space-x-4">
+        <div className="hidden md:flex space-x-4 items-center">
           <a href="/" className="text-gray-700 hover:text-gray-900">
             Home
           </a>
-          <a href="/about" className="text-gray-700 hover:text-gray-900">
-            About
-          </a>
-          <a href="/pricing" className="text-gray-700 hover:text-gray-900">
-            Pricing
-          </a>
+
           <a href="/auth/login" className="text-gray-700 hover:text-gray-900">
             Login
           </a>
-          <a href="/auth/signup" className="text-gray-700 hover:text-gray-900">
-            Signup
-          </a>
+          <Link to="/auth/signup">
+            <Button>Signup</Button>
+          </Link>
         </div>
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center">
           <button type="button" className="text-gray-700 focus:outline-none">
             <svg
               className="w-6 h-6"
